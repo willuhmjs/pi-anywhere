@@ -16,7 +16,7 @@ const webhook = new Discord.WebhookClient(webhookId, webhookToken);
   const embed = new Discord.MessageEmbed()
     .setTitle("Server Created!")
     .setDescription(url)
-    .setFooter("A server has been created for your Pi.")
+    .setFooter("A server has been created for your Pi")
     .setTimestamp()
     .setColor("GREEN");
 
