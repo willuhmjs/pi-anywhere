@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/willuhm-js/pi-ngrok#readme",
   "dependencies": {
+    "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "ngrok": "^4.0.1"
   }
