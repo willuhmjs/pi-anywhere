@@ -1,3 +1,7 @@
+require('dotenv').config();
+
 module.exports = {
-  token: "1cljU8dqUhASv5MsBjUE10RLTAq_2zJ4JEFEWviNEaY1pTTm6"
+  token: process.env.TOKEN,
+  webhookId: process.env.WEBHOOKID,
+  webhookToken: process.env.WEBHOOKTOKEN
 }

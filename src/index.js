@@ -1,5 +1,6 @@
 const ngrok = require("ngrok");
-const { token }= require("./config");
+const { token } = require("./config");
+
 
 (async () => {
   await ngrok.authtoken(token);
