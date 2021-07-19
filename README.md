@@ -4,6 +4,7 @@ pi-ngrok is an app designed to alert you via Discord webhook with a Ngrok TCP IP
 ## Installation / Configuration
 * `git clone https://github.com/willuhm-js/pi-ngrok`
 * `cd pi-ngrok`
+* Edit the configuration in `src/config.js`
 * `npm install`
 * `node src/index.js`
 
