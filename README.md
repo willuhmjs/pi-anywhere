@@ -12,4 +12,6 @@ pi-ngrok is an app designed to alert you via Discord webhook with a Ngrok TCP IP
 **pi-ngrok** is licensed under the [MIT License](https://github.com/willuhm-js/pi-ngrok/blob/master/LICENSE)
 
 ## Additional Note(s)
-Feel free to fork this repository and create different variants. I am willing to add other versions (perhaps a version that uses HTTP instead of SSH) to new branches; credit will be given.
+* Feel free to fork this repository and create different variants. I am willing to add other versions (perhaps a version that uses HTTP instead of SSH) to new branches; credit will be given.
+
+* To run when your Raspberry Pi (or other system) boots, I recommend having it launch through the `rc.local` file. If your system has no such file, please research other methods.
