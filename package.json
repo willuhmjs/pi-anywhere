@@ -1,7 +1,7 @@
 {
-  "name": "pi-ngrok",
+  "name": "pi-anywhere",
   "version": "1.0.0",
-  "description": "pi-ngrok is an app designed to alert you via text an ngrok tcp ip when your Raspberry Pi starts for easy SSH connections",
+  "description": "pi-anywhere is an app designed to alert you via text an ngrok tcp ip when your Raspberry Pi starts for easy SSH connections",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,11 +18,11 @@
   "author": "William Faircloth",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/willuhm-js/pi-ngrok/issues"
+    "url": "https://github.com/willuhm-js/pi-anywhere/issues"
   },
-  "homepage": "https://github.com/willuhm-js/pi-ngrok#readme",
+  "homepage": "https://github.com/willuhm-js/pi-anywhere#readme",
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "13.1.0",
     "dotenv": "^10.0.0",
     "ngrok": "^4.0.1"
   }
