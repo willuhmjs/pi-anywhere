@@ -12,6 +12,8 @@ pi-anywhere is an app designed to allow connection between your Raspberry Pi and
 **pi-anywhere** is licensed under the [MIT License](https://github.com/willuhm-js/pi-anywhere/blob/master/LICENSE)
 
 ## Additional Note(s)
+* This application uses `discord.js@11.5.3`. This package is currently deprecated but used by this application to allow usage on Raspberry Pi 0 devices.
+
 * This application searches for a channel named "console" in your Discord server, please ensure that one exists.
 
 * Please only add this bot to one server to avoid error.

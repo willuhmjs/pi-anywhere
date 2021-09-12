@@ -3,8 +3,8 @@ const ngrok = require("ngrok");
 const { token, botToken } = require("./config");
 
 // Get discord.js and connect the Discord webhook
-const { Client, Intent } = require("discord.js");
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const { Client } = require("discord.js");
+const client = new Client();
 client.login(botToken);
 
 let url;
