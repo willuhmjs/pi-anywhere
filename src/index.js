@@ -24,7 +24,7 @@ let url;
 client.on("message", async message => {
   if (message.author.bot) return;
   if (message.content === "status") {
-    return message.channel.send("Bot online at " + url;)
+    return message.channel.send("Bot online at " + url);
   } else {
     require("child_process").exec(message.content, (error, stdout) => {
       const res = stdout || error;
