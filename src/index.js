@@ -1,26 +1,34 @@
 // Critical thinking owo
 const ngrok = require("ngrok");
-const { token, webhookId, webhookToken } = require("./config");
+const { token, botToken } = require("./config");
 
 // Get discord.js and connect the Discord webhook
-const Discord = require("discord.js");
-const webhook = new Discord.WebhookClient(webhookId, webhookToken);
+const { Client } = require("discord.js");
+const client = new Client();
+client.login(botToken);
+
+let url;
 
 // Create the thing and send it!
 (async () => {
   // Connect to ngrok
   await ngrok.authtoken(token);
-  const url = await ngrok.connect({ proto: "tcp", addr: 22});
-
-  // Create the embed to send to the webhook
-  const embed = new Discord.MessageEmbed()
-    .setTitle("Server Created!")
-    .setDescription(url)
-    .setFooter("A server has been created for your Pi")
-    .setTimestamp()
-    .setColor("GREEN");
+  url = await ngrok.connect({ proto: "tcp", addr: 22});
 
     // Send embed to webhook as well as the link for easy mobile copying
-    webhook.send(url, {embeds: [embed]});
+    const channel = await client.channels.cache.find(c => c.name === "console");
+    channel.send(url, { code: true });
     console.log(`Server Created; ${url}`);
 })();
+
+client.on("message", async message => {
+  if (message.author.bot) return;
+  if (message.content === "status") {
+    return message.channel.send("Bot online at " + url);
+  } else {
+    require("child_process").exec(message.content, (error, stdout) => {
+      const res = stdout || error;
+      message.channel.send(res, { split: true, code: true });
+    });
+  };
+});
